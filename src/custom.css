@@ -1,0 +1,22 @@
+.custom_indianic_layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.custom_indianic_header {
+    display: flex;
+    height: 10%;
+}
+
+.custom_indianic_content {
+    display: grid;
+    height: 80%;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.custom_indianic_footer {
+    display: flex;
+    height: 10%;
+}

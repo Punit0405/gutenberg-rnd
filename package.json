@@ -1,0 +1,89 @@
+{
+  "name": "gutenberg-rnd",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@automattic/isolated-block-editor": "^2.29.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@wordpress/a11y": "file:packages/a11y",
+    "@wordpress/annotations": "file:packages/annotations",
+    "@wordpress/api-fetch": "file:packages/api-fetch",
+    "@wordpress/autop": "file:packages/autop",
+    "@wordpress/blob": "file:packages/blob",
+    "@wordpress/block-directory": "file:packages/block-directory",
+    "@wordpress/block-editor": "^14.8.0",
+    "@wordpress/block-library": "^9.13.0",
+    "@wordpress/block-serialization-default-parser": "file:packages/block-serialization-default-parser",
+    "@wordpress/block-serialization-spec-parser": "file:packages/block-serialization-spec-parser",
+    "@wordpress/blocks": "^14.2.0",
+    "@wordpress/components": "^28.13.0",
+    "@wordpress/compose": "file:packages/compose",
+    "@wordpress/core-data": "file:packages/core-data",
+    "@wordpress/data": "file:packages/data",
+    "@wordpress/data-controls": "file:packages/data-controls",
+    "@wordpress/date": "file:packages/date",
+    "@wordpress/deprecated": "file:packages/deprecated",
+    "@wordpress/dom": "file:packages/dom",
+    "@wordpress/dom-ready": "file:packages/dom-ready",
+    "@wordpress/edit-post": "file:packages/edit-post",
+    "@wordpress/edit-site": "file:packages/edit-site",
+    "@wordpress/edit-widgets": "file:packages/edit-widgets",
+    "@wordpress/editor": "^14.13.0",
+    "@wordpress/element": "^6.13.0",
+    "@wordpress/escape-html": "file:packages/escape-html",
+    "@wordpress/format-library": "file:packages/format-library",
+    "@wordpress/hooks": "file:packages/hooks",
+    "@wordpress/html-entities": "file:packages/html-entities",
+    "@wordpress/i18n": "file:packages/i18n",
+    "@wordpress/is-shallow-equal": "file:packages/is-shallow-equal",
+    "@wordpress/keyboard-shortcuts": "file:packages/keyboard-shortcuts",
+    "@wordpress/keycodes": "file:packages/keycodes",
+    "@wordpress/list-reusable-blocks": "file:packages/list-reusable-blocks",
+    "@wordpress/media-utils": "file:packages/media-utils",
+    "@wordpress/notices": "file:packages/notices",
+    "@wordpress/nux": "file:packages/nux",
+    "@wordpress/plugins": "file:packages/plugins",
+    "@wordpress/priority-queue": "file:packages/priority-queue",
+    "@wordpress/redux-routine": "file:packages/redux-routine",
+    "@wordpress/rich-text": "file:packages/rich-text",
+    "@wordpress/server-side-render": "file:packages/server-side-render",
+    "@wordpress/shortcode": "file:packages/shortcode",
+    "@wordpress/token-list": "file:packages/token-list",
+    "@wordpress/url": "file:packages/url",
+    "@wordpress/viewport": "file:packages/viewport",
+    "@wordpress/wordcount": "file:packages/wordcount",
+    "parsel-js": "^1.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
