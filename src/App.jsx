@@ -1,5 +1,4 @@
 import React from "react";
-import "@wordpress/editor"; // This shouldn't be necessary
 
 import { useEffect, useState } from "@wordpress/element";
 import { BlockEditorKeyboardShortcuts, BlockEditorProvider, BlockList, BlockInspector, WritingFlow, ObserveTyping, BlockTools, Inserter } from "@wordpress/block-editor";
