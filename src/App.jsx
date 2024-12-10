@@ -4,7 +4,7 @@ import { useEffect, useState } from "@wordpress/element";
 import { BlockEditorKeyboardShortcuts, BlockEditorProvider, BlockList, BlockInspector, WritingFlow, ObserveTyping, BlockTools, Inserter } from "@wordpress/block-editor";
 import { Popover, SlotFillProvider, DropZoneProvider } from "@wordpress/components";
 import { registerCoreBlocks } from "@wordpress/block-library";
-import { serialize } from '@wordpress/blocks'; // Import serialize function
+import { getBlockTypes, getBlockVariations, serialize, unregisterBlockType, unregisterBlockVariation } from '@wordpress/blocks'; // Import serialize function
 import { registerBlockType } from '@wordpress/blocks';
 import { RichText, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl } from '@wordpress/components';
@@ -48,6 +48,27 @@ export default function App() {
 
   useEffect(() => {
     registerCoreBlocks();
+    const allBlocks = getBlockTypes();
+    const widgetBlocks = allBlocks.filter(b => b.category === "widgets").map(b => b.name);
+    const themeBlocks = allBlocks.filter(b => b.category === "theme").map(b => b.name);
+    const embedBlocks = allBlocks.filter(b => b.category === "embed").map(b => b.name);
+    const embVariations = getBlockVariations(embedBlocks[0]).map(emb => emb.name);
+    const requiredEmbeds = ['instagram', 'youtube', 'twitter', 'spotify', 'reddit', 'facebook', 'tiktok']
+    const embedsTobeRemoved = embVariations.filter(v => !requiredEmbeds.includes(v));
+    console.log(embedsTobeRemoved, "embedstobeRemovedd")
+
+
+    console.log(embedBlocks, "allBlocks")
+
+    for (const block of widgetBlocks) {
+      unregisterBlockType(block);
+    }
+    for (const block of themeBlocks) {
+      unregisterBlockType(block);
+    }
+    for (const block of embedsTobeRemoved) {
+      unregisterBlockVariation(embedBlocks[0], block);
+    }
     registerBlockType('myplugin/dynamic-block', {
       title: 'Custom Block Development Punit Test',
       category: 'common',
